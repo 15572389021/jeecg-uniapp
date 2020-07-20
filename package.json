@@ -1,0 +1,26 @@
+{
+  "name": "jeecg-uniapp",
+  "version": "1.0.0",
+  "description": "![JEECG](https://static.oschina.net/uploads/img/201905/24164523_XDhg.png \"JeecgBoot快速开发平台\")",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/html5plus": "^1.0.1",
+    "@types/uni-app": "^1.4.3",
+    "query-string": "^6.13.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangdaiscott/jeecg-uniapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhangdaiscott/jeecg-uniapp/issues"
+  },
+  "homepage": "https://github.com/zhangdaiscott/jeecg-uniapp#readme"
+}
