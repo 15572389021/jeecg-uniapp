@@ -93,30 +93,23 @@
 			          password:this.password
 			        }
 					this.loading=true;
-			        this.loading = false;
-                    this.$Router.push({name:'index'})
-                    // this.$Router.replaceAll({name:'index'})
 
-/*
 			        this.mLogin(loginParams).then((res) => {
 					  console.log("mLogin",res)
 					  this.loading=false;
 			          if(res.data.success){
 						  this.$tip.success('登录成功!')
 						  this.$Router.replaceAll({name:'index'})
-						 /!* uni.reLaunch({
+						  /** uni.reLaunch({
 							url: '/pages/index/index'
-						  }); *!/
+						  }); */
 			          }else{
 			              this.$tip.alert(res.data.message);
 			          }
 			        }).catch((err) => {
 			          let msg = err.data.message || "请求出现错误，请稍后再试"
 			          this.$tip.alert(msg);
-			        }).finally(()=>{
-					  this.loading=false;
-					})
-*/
+			        })
 			      }
         }
     }

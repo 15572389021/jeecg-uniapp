@@ -29,6 +29,9 @@ Vue.component('home',home)
 import people from './pages/user/people.vue'
 Vue.component('people',people)
 
+import addCard from './pages/card/addCard.vue'
+Vue.component('addCard',addCard)
+
 // 自定义组件
 import mySelect from './components/my-componets/my-select.vue'
 Vue.component('mySelect',mySelect)

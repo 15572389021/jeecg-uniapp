@@ -23,8 +23,15 @@ const routes = [
 	        title: '首页',
 	    },
 	},
-    {
-	    path: '/pages/user/people',
+	{
+		path: '/pages/card/addCard',
+		name: 'addCard',
+		meta: {
+			title: '添加',
+		},
+	},
+	{
+		path: '/pages/user/people',
         name: 'people',
         meta: {
 	        title: '个人中心',
