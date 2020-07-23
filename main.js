@@ -29,7 +29,7 @@ Vue.component('home',home)
 import people from './pages/user/people.vue'
 Vue.component('people',people)
 
-import addCard from './pages/card/addCard.vue'
+import addCard from './pages/card/card.vue'
 Vue.component('addCard',addCard)
 
 // 自定义组件
