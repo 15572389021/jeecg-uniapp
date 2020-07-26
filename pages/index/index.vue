@@ -11,7 +11,7 @@
 				<view class='cuIcon-peoplelist'></view>审批
 			</view>
 			<view :class="PageCur=='addCard'?'action text-green':'action text-gray'" @click="NavChange" data-cur="addCard">
-				<view class='cuIcon-addCard'></view>添加
+				<view class='cuIcon-add'></view>添加
 			</view>
 			<view :class="PageCur=='profile'?'action text-green':'action text-gray'" @click="NavChange" data-cur="profile">
 				<view class='cuIcon-profile'></view>发起

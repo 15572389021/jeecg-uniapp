@@ -181,6 +181,7 @@
 					console.log("用户",res)
 					if (res.data.success) {
 						let result = res.data.result
+						console.log(result)
 						if(result.avatar&&result.avatar.length >0)
 						this.personalMsg.avatar = api.getFileAccessHttpUrl(result.avatar)
 						this.personalMsg.realname = result.realname

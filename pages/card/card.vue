@@ -2,7 +2,7 @@
 	<view>
 		<cu-custom bgColor="bg-gradual-pink" :isBack="true">
 			<block slot="backText">返回</block>
-			<block slot="content">编辑卡片</block>
+			<block slot="content">添加卡片</block>
 		</cu-custom>
 		<form>
 			<view class="cu-form-group">
@@ -11,7 +11,12 @@
 			</view>
 			<view class="cu-form-group">
 				<view class="title">银行</view>
-				<input placeholder="银行" name="input" v-model="card.bankz"></input>
+				<!-- <input placeholder="银行" name="input" v-model="card.bank"></input> -->
+				<picker mode="selector" :value="card.bank" @change="bankChange" :range='banks'>
+					<view class="picker">
+						{{banks[card.bank]}}
+					</view>
+				</picker>
 			</view>
 			<view class="cu-form-group">
 				<view class="title">固定额度</view>
@@ -19,20 +24,28 @@
 			</view>
 			<view class="cu-form-group">
 				<view class="title">账单日</view>
-				<input placeholder="账单日" name="input" v-model="card.billDay"></input>
+				<picker mode="selector" :value="card.billDay" @change="billDateChange" :range='days'>
+					<view class="picker">
+						{{card.billDay}}
+					</view>
+				</picker>
 			</view>
 			<view class="cu-form-group">
 				<view class="title">还款日</view>
-				<input placeholder="还款日" name="input" v-model="card.dueDay"></input>
+				<picker mode="selector" :value="card.dueDay" @change="dueDateChange" :range='days'>
+					<view class="picker">
+						{{card.dueDay}}
+					</view>
+				</picker>
 			</view>
 			<view class="cu-form-group">
 				<view class="title">初始剩余额度</view>
 				<input placeholder="初始剩余额度" name="input" v-model="card.remainQuota"></input>
 			</view>
-
-			<view class="padding flex flex-direction">
-				<button class="cu-btn bg-blue lg" @click="submit">提交</button>
-				<button class="cu-btn bg-blue lg" @click="cancle">取消</button>
+			
+			<view class="flex padding">
+				<view class="flex-sub bg-blue padding-sm margin-xs radius text-center" @click="submit">确定</view>
+				<view class="flex-sub bg-blue padding-sm margin-xs radius text-center">取消</view>
 			</view>
 		</form>
 	</view>
@@ -50,12 +63,14 @@
 				card: {
 					userId: '',
 					cardNo: '',
-					bank: '',
+					bank: '0',
 					fixedQuota: '',
-					billDay: '',
-					dueDay: '',
+					billDay: '1',
+					dueDay: '1',
 					remainQuota: ''
 				},
+				days: [1,2,3,4,5,6,7,8,9,10],
+				banks: ["中国银行", "光大银行", "交通银行", "中信银行", "招商银行", "平安银行"]
 			};
 		},
 		methods: {
@@ -79,6 +94,15 @@
 			},
 			cancle() {
 				console.log('清空数据')
+			},
+			billDateChange(e) {
+				this.card.billDay = e.detail.value
+			},
+			dueDateChange(e) {
+				this.card.dueDay = e.detail.value
+			},
+			bankChange(e) {
+				this.card.bank = e.detail.value
 			}
 		}
 	}
