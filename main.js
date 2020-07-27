@@ -32,6 +32,9 @@ Vue.component('people',people)
 import addCard from './pages/card/card.vue'
 Vue.component('addCard',addCard)
 
+import index from './pages/card/index.vue'
+Vue.component('index',index)
+
 // 自定义组件
 import mySelect from './components/my-componets/my-select.vue'
 Vue.component('mySelect',mySelect)

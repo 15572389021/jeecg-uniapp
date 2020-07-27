@@ -1,4 +1,4 @@
-<template name="card">
+<template name="spendRecord">
 	<view>
 		<cu-custom bgColor="bg-gradual-pink" :isBack="true">
 			<block slot="backText">返回</block>
@@ -53,7 +53,7 @@
 
 <script>
 	export default {
-		name: "card",
+		name: "spendRecord",
 		data() {
 			return {
 				index: -1,

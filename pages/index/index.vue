@@ -1,13 +1,13 @@
 <template>
 	<view>
 		<home :cur="PageCur" v-if="PageCur=='home'" :key="commponent1Key"></home>
-		<people v-if="PageCur=='people'" :key="commponent2Key"></people>
 		<add-card v-if="PageCur == 'addCard'" :key="commponent2Key"></add-card>
+		<index v-if="PageCur == 'index'" :key="commponent3Key"></index>
 		<view class="cu-bar tabbar bg-white shadow foot">
 			<view :class="PageCur=='home'?'action text-green':'action text-gray'" @click="NavChange" data-cur="home">
 				<view class='cuIcon-homefill'></view>主页
 			</view>
-			<view :class="PageCur=='peoplelis'?'action text-green':'action text-gray'" @click="NavChange" data-cur="peoplelis">
+			<view :class="PageCur=='index'?'action text-green':'action text-gray'" @click="NavChange" data-cur="index">
 				<view class='cuIcon-peoplelist'></view>审批
 			</view>
 			<view :class="PageCur=='addCard'?'action text-green':'action text-gray'" @click="NavChange" data-cur="addCard">
@@ -41,7 +41,6 @@
 		},
 		methods: {
 			NavChange: function(e) {
-				console.log(e)
 				this.PageCur = e.currentTarget.dataset.cur
 			}
 			

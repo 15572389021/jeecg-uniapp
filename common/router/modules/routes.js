@@ -31,10 +31,17 @@ const routes = [
 		},
 	},
 	{
-		path: '/pages/user/people',
-        name: 'people',
+		path: '/pages/card/addCard',
+		name: 'addCard',
+		meta: {
+			title: '添加',
+		},
+	},
+	{
+		path: '/pages/card/index',
+        name: 'my-card',
         meta: {
-	        title: '个人中心',
+	        title: '我的卡片',
 	    },
 	},
 	{
